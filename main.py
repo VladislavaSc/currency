@@ -1,12 +1,10 @@
-import requests
 
-response = requests.get('https://api.github.com')
-print(response)
-print(response.status_code)
-print(dir(response))
-print(response.content)
+def main():
+    while True:
+        currency = input('Enter currency name (USD or EUR): ')
+        if currency not in ('USD', 'EUR'):
+            print('Incorrect input')
+            continue
 
-print(response.text)
-print(response.content)
-
-print(response.json())
+if __name__ == '__main__':
+    main()
