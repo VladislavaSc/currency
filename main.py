@@ -1,8 +1,7 @@
-from datetime import datetime
-import requests
-import json
-
 import os
+from datetime import datetime
+import json
+import requests
 
 API_KEY = os.getenv('EXCHANGE_RATE_API_KEY')
 def main():
