@@ -29,10 +29,14 @@ def main():
 
 def get_currency_rate(base: str) -> float:
     """Receives the exchange rate from the API and returns it as a float"""
-    pass
+    url = "https://api.apilayer.com/exchangerates_data/latest"
+
+    response = requests.get(url, headers={'apikey': API_KEY}, params={'base': base})
+    print(response.json())
 
 def save_to_json(data):
     pass
 
 if __name__ == '__main__':
-    main()
+    get_currency_rate('USD')
+   # main()
